@@ -1,0 +1,7 @@
+{
+  "name": "listBuy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
