@@ -1,0 +1,46 @@
+ion-header {
+    ion-toolbar {
+      --background: #ffffff;
+      --color: #000;
+      height: 56px; // Altura estándar de Ionic para el header
+      border-bottom: 1px solid #d1d1d6;
+    }
+  }
+  
+  ion-content {
+    --background: #f2f2f7;
+    padding: 16px;
+  }
+  
+  ion-item-divider {
+    --background: #e0e0e0;
+    color: #6b6b6b;
+    font-weight: bold;
+    font-size: 0.85rem;
+    padding: 8px 0;
+  }
+  
+  ion-item {
+    --background: #ffffff;
+    --color: #000;
+    font-size: 1rem;
+    --inner-padding-top: 8px;
+    --inner-padding-bottom: 8px;
+    padding-left: 0; // Alinear el padding con el borde de la pantalla
+    padding-right: 0;
+  }
+  
+  ion-note {
+    color: #8e8e93;
+    font-size: 0.85rem;
+  }
+  
+  ion-toggle {
+    --handle-background: #000;
+    --background-checked: #000;
+  }
+  
+  ion-label {
+    font-size: 1rem;
+    color: #000;
+  }
