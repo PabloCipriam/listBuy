@@ -1,14 +1,14 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>{{ list.title }}</ion-title>
-    <ion-buttons slot="end">
-      <ion-button [routerLink]="['/editar-lista', list.id]">Editar</ion-button>
+<app-header title="Detalle de la lista" backButton="/lists"></app-header>
 
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<ion-toolbar *ngIf="list">
+  <ion-title>{{ list.title }}</ion-title>
+  <ion-buttons slot="end">
+    <ion-button [routerLink]="['/editar-lista', list.id]">Editar</ion-button>
 
-<ion-content>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content *ngIf="list">
   <ion-list>
     <ion-item *ngFor="let item of list.items; let i = index">
       <ion-label>{{ item.name }}</ion-label>
