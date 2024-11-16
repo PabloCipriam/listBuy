@@ -13,7 +13,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
-
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 
 @NgModule({
@@ -22,6 +22,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule

@@ -20,7 +20,7 @@ export class HomePage implements OnInit{
 
   constructor() {}ß
   ngOnInit(): void {
-    this.fireBaseSvc.signIn(this.userData)
+    this.fireBaseSvc.login(this.userData.email,this.userData.password)
      .then( (res: any) =>{
       console.log(res)
      });

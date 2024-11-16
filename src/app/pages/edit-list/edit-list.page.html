@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ listId ? 'Editar Lista' : 'Crear Lista' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Título de la lista -->
+  <ion-item>
+    <ion-label position="floating">Título</ion-label>
+    <ion-input [(ngModel)]="list.title"></ion-input>
+  </ion-item>
+
+  <!-- Lista de ítems -->
+  <ion-list>
+    <ion-item *ngFor="let item of list.items; let i = index">
+      <!-- Campo de texto para 'name' -->
+      <ion-input [(ngModel)]="list.items[i].name" placeholder="Nuevo Item"></ion-input>
+
+      <!-- Toggle para 'completed' -->
+      <ion-toggle [(ngModel)]="list.items[i].completed"></ion-toggle>
+
+      <!-- Botón para eliminar ítem -->
+      <ion-button color="danger" fill="clear" (click)="removeItem(i)">X</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Botones de acción -->
+  <ion-button expand="full" (click)="addItem()">+ Agregar Item</ion-button>
+  <ion-button expand="full" color="success" (click)="saveList()">Guardar</ion-button>
+  <ion-button *ngIf="listId" expand="full" color="danger" (click)="deleteList()">Eliminar</ion-button>
+</ion-content>

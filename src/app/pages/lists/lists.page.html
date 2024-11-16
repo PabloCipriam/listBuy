@@ -1,0 +1,28 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Listas</ion-title>
+
+
+    <ion-button  slot="end" fill="outline"  (click)="signOut()" >
+      Cerrar Sesion
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content>
+  <ion-searchbar placeholder="Buscar" (ionInput)="filterLists($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let list of filteredLists" (click)="navigateToDetail(list.id)">
+      {{ list.title }}
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" color="success" (click)="navigateToCreateList()">Crear Lista</ion-button>
+</ion-content>
+
+
+
